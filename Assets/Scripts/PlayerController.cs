@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("AnimVertical", playerInput.y);
 
 
+        animator.SetFloat("AnimVertical", playerInput.y);
 
     }
 }
