@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D RBPlayer;
     public float speed;
     private Camera theCam;
 
@@ -29,7 +28,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Player movment
-        RBPlayer.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed;
+        Vector3 playerInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+        transform.position = transform.position + playerInput.normalized * speed * Time.deltaTime;
 
         //Look att the mouse
         Vector3 mouse = Input.mousePosition;
@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
             Instantiate(bag, bagPosition.position, Quaternion.identity);
         }
 
-       
+        animator.SetFloat("Speed",Mathf.Abs(transform.position.x));
+        animator.SetFloat("Speed", Mathf.Abs(transform.position.y));
+
+
     }
 }
