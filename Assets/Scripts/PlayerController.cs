@@ -60,8 +60,8 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetFloat("AnimHorizontal",playerInput.x);
-        
 
+        animator.SetFloat("AnimVertical", playerInput.y);
 
 
 
