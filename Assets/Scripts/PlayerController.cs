@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Player movment
-        RBPlayer.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * speed;
+        RBPlayer.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed;
 
         //Look att the mouse
         Vector3 mouse = Input.mousePosition;
