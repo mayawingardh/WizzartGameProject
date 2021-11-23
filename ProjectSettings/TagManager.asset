@@ -13,8 +13,13 @@ TagManager:
   - TriggerLevelSurreal
   - TriggerLevelWaterColour
   - TriggerAteljen
+<<<<<<< Updated upstream
   - Undefined
   - Enemy
+=======
+  - Enemy
+  - ManagerGame
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
