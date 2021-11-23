@@ -50,9 +50,9 @@ public class PlayerController : MonoBehaviour
         //then in unity. set up firepoint (emty object connected to player) and drag it in fix prefab?
 
 
-        animator.SetFloat("MouseHorizontal", offSet.x);
+        //animator.SetFloat("MouseHorizontal", offSet.x);
 
-        animator.SetFloat("MouseVertikal",offSet.y);
+        //animator.SetFloat("MouseVertikal",offSet.y);
 
         if (Input.GetMouseButtonDown(0))
         {
