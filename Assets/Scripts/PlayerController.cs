@@ -60,14 +60,10 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetFloat("AnimHorizontal",playerInput.x);
-<<<<<<< Updated upstream
 
         animator.SetFloat("AnimVertical", playerInput.y);
 
 
 
-=======
-        
->>>>>>> Stashed changes
     }
 }
