@@ -9,9 +9,14 @@ public class PlayerController : MonoBehaviour
     private Camera theCam;
 
     public Transform firePoint;
+    public Transform bagPosition;
 
     //attatch the sprite in unity
     public GameObject playerBullets;
+    public GameObject bag;
+    public Animator animator;
+
+    Vector2 posDif;
 
     void Start()
     {
@@ -36,12 +41,27 @@ public class PlayerController : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             //spawn bullets (what, were, rotation)
             Instantiate(playerBullets, firePoint.position, transform.rotation);
         }
 
-        //then in unity. set up firepoint (emty object connected to player) and drag it in 
+        //then in unity. set up firepoint (emty object connected to player) and drag it in fix prefab?
+
+
+        animator.SetFloat("MouseHorizontal", offSet.x);
+
+        animator.SetFloat("MouseVertikal",offSet.y);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Lagg in animation for att sla
+            //animator.SetFloat; 
+
+            Instantiate(bag, bagPosition.position, Quaternion.identity);
+        }
+
+       
     }
 }
