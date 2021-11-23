@@ -4,7 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - ManagerScene
+  - SceneAteljen
+  - TriggerRoomPopArt
+  - TriggerRoomSurreal
+  - TriggerRoomWaterColour
+  - TriggerLevelPopArt
+  - TriggerLevelSurreal
+  - TriggerLevelWaterColour
+  - TriggerAteljen
   layers:
   - Default
   - TransparentFX

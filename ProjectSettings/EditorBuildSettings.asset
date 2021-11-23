@@ -8,4 +8,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SceneAteljen.unity
+    guid: db2aecb16fc49d04dbd9874e6d3796b9
+  - enabled: 1
+    path: Assets/Scenes/SceneRoomPopArt.unity
+    guid: 776eeb01fb297cf44be3e9f3cede175a
+  - enabled: 1
+    path: Assets/Scenes/SceneRoomSurreal.unity
+    guid: 96fae6ceaecaa654c9e727d4533a5488
+  - enabled: 1
+    path: Assets/Scenes/SceneRoomWaterColour.unity
+    guid: dafdcd5c2dd114b4abc50a15bf3bb04b
+  - enabled: 1
+    path: Assets/Scenes/SceneLevelPopArt.unity
+    guid: 08cb9ee884b54bb4f9373ecd429db285
+  - enabled: 1
+    path: Assets/Scenes/SceneLevelSurreal.unity
+    guid: 4aa39c48b7b1e804c989e6dba360aa40
+  - enabled: 1
+    path: Assets/Scenes/SceneLevelWaterColour.unity
+    guid: ff0be55a466bed04293b50d1e522362c
   m_configObjects: {}
