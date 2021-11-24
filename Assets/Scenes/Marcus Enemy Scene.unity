@@ -308,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459752637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 9.56, z: 0}
+  m_LocalPosition: {x: -0.75, y: 12.2, z: 0}
   m_LocalScale: {x: 31.056162, y: 0.8966833, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -417,8 +417,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867349250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.58, y: -0.0004, z: 0}
-  m_LocalScale: {x: 1, y: 18.383211, z: 1}
+  m_LocalPosition: {x: -16.58, y: 1.2119, z: 0}
+  m_LocalScale: {x: 1, y: 20.807957, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -764,6 +764,7 @@ MonoBehaviour:
   playerBullets: {fileID: 0}
   bag: {fileID: 0}
   animator: {fileID: 0}
+  delay: 0
 --- !u!212 &1586164602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -933,6 +934,7 @@ MonoBehaviour:
   playerBullets: {fileID: 4455235740079281236, guid: cc216e83a21e2f14f9b1d2ee1050aab4, type: 3}
   bag: {fileID: 7831685207062621866, guid: bc5415206717fde40a01dfa5b1ddc191, type: 3}
   animator: {fileID: 0}
+  delay: 0
 --- !u!114 &1680497372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,7 +1124,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.873413
+  orthographic size: 13.581519
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1255,8 +1257,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962196345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.1961, y: 0.2498, z: 0}
-  m_LocalScale: {x: 0.9322, y: 18.525307, z: 1}
+  m_LocalPosition: {x: 15.1961, y: 1.4621, z: 0}
+  m_LocalScale: {x: 0.9322, y: 20.95027, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9

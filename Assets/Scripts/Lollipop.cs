@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Lollipop : MonoBehaviour
-{
-
+{ 
     public float speed;
-
     private Transform player;
     private Vector2 target;
+    
 
     private void Start()
     {
@@ -17,6 +16,7 @@ public class Lollipop : MonoBehaviour
 
         target = new Vector2(player.position.x, player.position.y);
 
+     //   ParticleSystem part = GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -27,7 +27,9 @@ public class Lollipop : MonoBehaviour
         if(transform.position.x == target.x && transform.position.y == target.y)
         {
             DestroyLollipop();
+
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,10 +38,16 @@ public class Lollipop : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DestroyLollipop();
+          //  var part = GetComponent<ParticleSystem>();
+          //  part.Play();
+          //  Destroy(gameObject, part.main.duration);
         }
     }
     void DestroyLollipop()
     {
         Destroy(gameObject);
+
     }
+
+
 }
