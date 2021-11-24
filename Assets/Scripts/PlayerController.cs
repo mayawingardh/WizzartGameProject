@@ -33,15 +33,7 @@ public class PlayerController : MonoBehaviour
         Vector3 playerInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         transform.position = transform.position + playerInput.normalized * speed * Time.deltaTime;
 
-        //MOVE TO GUN
-        //Vector3 mouse = Input.mousePosition;
-        //Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
-        //Vector2 offSet = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-
-        ////atan2 gives the angel in radian and rad2deg omvalandt to degrees
-        //float angle = Mathf.Atan2(offSet.y, offSet.x) * Mathf.Rad2Deg;
-
-        //transform.rotation = Quaternion.Euler(0f, 0f, angle);
+       
 
         //spawn bullets 
         if (Input.GetMouseButtonDown(1))
@@ -56,7 +48,9 @@ public class PlayerController : MonoBehaviour
 
           GameObject bag2 =  Instantiate(bag, bagPosition.position, Quaternion.identity);
 
-           Destroy(bag2, 1.3f);
+           
+
+            Destroy(bag2, 1.3f);
             
             
         }

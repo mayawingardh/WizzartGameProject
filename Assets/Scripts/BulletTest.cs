@@ -28,5 +28,10 @@ public class BulletTest : MonoBehaviour
         }
 
         Destroy(gameObject);
+
+        if (other.tag=="Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }

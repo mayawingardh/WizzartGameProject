@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4859982404933701196}
   - component: {fileID: -945611003806668175}
   - component: {fileID: 7270580567391267952}
+  - component: {fileID: 4097744505515755120}
   m_Layer: 0
   m_Name: nedladdning
   m_TagString: Bag
@@ -161,3 +162,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8949e3387d4934b45a2fd08cf10cd10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4097744505515755120
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831685207062621866}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18b77482aa8a12541a91231fe75bd09a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
