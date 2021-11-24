@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
           GameObject bag2 =  Instantiate(bag, bagPosition.position, Quaternion.identity);
 
-            Destroy(bag2, 2f);
+           Destroy(bag2, 1.3f);
             
             
         }
