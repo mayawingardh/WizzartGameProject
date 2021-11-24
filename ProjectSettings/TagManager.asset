@@ -15,6 +15,7 @@ TagManager:
   - TriggerAteljen
   - Undefined
   - Enemy
+  - ManagerGame
   layers:
   - Default
   - TransparentFX
