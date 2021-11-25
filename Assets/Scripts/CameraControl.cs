@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraChange : MonoBehaviour
+public class CameraControl : MonoBehaviour
 {
-
+    public GameObject target;
+    private Vector3 offset;
     public Camera Cam1;
     public Camera Cam2;
 
@@ -13,12 +14,15 @@ public class CameraChange : MonoBehaviour
     {
         Cam1.enabled = true;
         Cam2.enabled = false;
+        offset = transform.position - target.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.K))
+        transform.position = target.transform.position + offset;
+
+        if (Input.GetKeyDown(KeyCode.C))
         {
             Cam1.enabled = !Cam1.enabled;
             Cam2.enabled = !Cam2.enabled;
