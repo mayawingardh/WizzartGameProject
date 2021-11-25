@@ -6,19 +6,45 @@ using UnityEngine.UI;
 public class HealthController : MonoBehaviour
 {
     // Connect canvas text component in inspector
-    public Text textPlayerLives;
+    public Text textPlayerHP;
+    public Text textEnemyHP;
 
-    int playerLives;
+    // Connect canvas slider in inspector
+    public Slider slider;
+
+    //int playerHP;
+    //int enemyHP;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerLives = 3;
+        //playerHP = 3;
+        //enemyHP = 5;
     }
 
-    public void CountLives(int playerHit)
+
+    // TODO: connect EnemyHp to other enemies 24/11
+    public void SetMaxHealth(int health)
     {
-        playerLives -= playerHit;
-        textPlayerLives.text = string.Format("Lives: {00}", playerLives);
+        slider.maxValue = health;
+        slider.value = health;
+    }
+
+    public void SetCurrentHealth(int health)
+    {
+        slider.value = health;
     }
 }
+
+    //public void PlayerHP(int playerHit)
+    //{
+    //    playerHP -= playerHit;
+    //    textPlayerHP.text = string.Format("Player: {00}", playerHP);
+    //}
+
+    //public void EnemyHP(int enemyHit)
+    //{
+    //    enemyHP -= enemyHit;
+    //    textEnemyHP.text = string.Format("Enemy: {00}", enemyHP);
+
+    //}

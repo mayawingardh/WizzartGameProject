@@ -34,4 +34,6 @@ public class BulletTest : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // TODO add collisions/triggers for the different enemies and include HP taken by them 24/11
 }
