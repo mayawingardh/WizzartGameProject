@@ -38,9 +38,9 @@ public class Lollipop : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DestroyLollipop();
-          //  var part = GetComponent<ParticleSystem>();
-          //  part.Play();
-          //  Destroy(gameObject, part.main.duration);
+         //   var part = GetComponent<ParticleSystem>();
+         //   part.Play();
+         //   Destroy(gameObject, part.main.duration);
         }
     }
     void DestroyLollipop()
