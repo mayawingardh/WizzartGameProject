@@ -387,13 +387,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  delay: 0
   firePoint: {fileID: 1366850726}
   bagPosition: {fileID: 688755570}
   playerBullets: {fileID: 4455235740079281236, guid: cc216e83a21e2f14f9b1d2ee1050aab4, type: 3}
   bag: {fileID: 7831685207062621866, guid: bc5415206717fde40a01dfa5b1ddc191, type: 3}
   animator: {fileID: 646207207}
   enemy: {fileID: 0}
-  delay: 0
 --- !u!212 &646207206
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -659,7 +659,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688755569}
   m_LocalRotation: {x: -0.009832198, y: -0, z: -0, w: 0.99995166}
-  m_LocalPosition: {x: 1.01, y: 1.42, z: -3.81}
+  m_LocalPosition: {x: 1.25, y: 0.83, z: -3.8}
   m_LocalScale: {x: 0.27951697, y: 0.27327922, z: 0.37900606}
   m_Children: []
   m_Father: {fileID: 646207209}
