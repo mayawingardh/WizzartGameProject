@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-    public Transform player;
+    GameObject player;
     private Rigidbody2D RBEnemy;
     private Vector2 movement;
     public float moveSpeed = 5;
@@ -14,12 +14,13 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         RBEnemy = this.GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = player.position - transform.position;
+        Vector3 direction = player.transform.position - transform.position;
 
         //calculates angle and makes enemy face player
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -35,9 +36,9 @@ public class EnemyMovement : MonoBehaviour
         moveEnemy(movement);
     }
 
-    void moveEnemy(Vector2 direction)
+    void moveEnemy(Vector3 direction)
     {
         //Handles movement speed of the enemy
-        RBEnemy.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        RBEnemy.MovePosition((Vector3)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }

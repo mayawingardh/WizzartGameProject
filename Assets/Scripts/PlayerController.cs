@@ -16,11 +16,15 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public GameObject enemy;
 
-    public Rigidbody2D player;
+    Rigidbody2D player;
     float xAxis;
     float yAxis;
     Vector2 posDif;
 
+    private void Start()
+    {
+        player = GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
         //Player movment
@@ -29,10 +33,10 @@ public class PlayerController : MonoBehaviour
         yAxis = Input.GetAxisRaw("Vertical");
         player.velocity = (new Vector2(xAxis, yAxis) * speed);
 
-        animator.SetFloat("AnimHorizontal", xAxis);
-        animator.SetFloat("AnimVertical", yAxis);
+        //animator.SetFloat("AnimHorizontal", xAxis);
+        //animator.SetFloat("AnimVertical", yAxis);
 
-        RotateAnimation();
+        //RotateAnimation();
 
         //Bag
         if (Input.GetMouseButtonDown(0))
