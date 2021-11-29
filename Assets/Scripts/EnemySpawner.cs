@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
              randX = Random.Range(-25f, 25f);        //Random pos X Change values to increase random range
              randY = Random.Range(-14f, 14f);        //Random pos Y Change values to increase random range
              whereToSpawn = new Vector2(randX, randY);
-             Instantiate(enemy, whereToSpawn, Quaternion.identity);
+             GameObject cloneEnemy = Instantiate(enemy, whereToSpawn, Quaternion.identity);
              enemyCounter++;                         //Counts enemies spawned, used for reaching max amount of enemies
         } 
     }
