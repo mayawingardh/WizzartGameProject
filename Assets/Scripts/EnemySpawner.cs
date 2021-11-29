@@ -5,24 +5,24 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemy;
+
+    public float spawnRate = 3f;
     float randX;
     float randY;
-    Vector2 whereToSpawn;
-    public float spawnRate = 3f;
     float nextSpawn = 2f;
     int maxEnemies = 100;
     int enemyCounter;
 
-    // Start is called before the first frame update
+    Vector2 whereToSpawn;
+   
     void Start()
     {
          enemyCounter = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {  
-            //When time passed is greater than the spawnRate, spawn an enemy at a random position X and Y
+        //When time passed is greater than the spawnRate, spawn an enemy at a random position X and Y
         if (Time.time > nextSpawn && enemyCounter < maxEnemies)   
         {
              nextSpawn = Time.time + spawnRate;

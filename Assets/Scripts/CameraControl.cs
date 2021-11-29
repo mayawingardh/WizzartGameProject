@@ -5,11 +5,11 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     public GameObject target;
-    private Vector3 offset;
     public Camera Cam1;
     public Camera Cam2;
 
-    // Start is called before the first frame update
+    Vector3 offset;
+
     void Start()
     {
         Cam1.enabled = true;
@@ -17,7 +17,6 @@ public class CameraControl : MonoBehaviour
         offset = transform.position - target.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = target.transform.position + offset;

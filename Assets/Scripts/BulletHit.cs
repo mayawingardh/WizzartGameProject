@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletTest : MonoBehaviour
+public class BulletHit : MonoBehaviour
 {
     float speed = 10;
     public Rigidbody2D RBBullets;
@@ -12,9 +12,7 @@ public class BulletTest : MonoBehaviour
         RBBullets.velocity = transform.right * speed;  
     }
 
-    //When the bullets hits enemy. Destroy enemy and its self
     private void OnTriggerEnter2D(Collider2D other)
-
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
