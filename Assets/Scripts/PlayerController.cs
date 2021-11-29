@@ -5,9 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {   
     private Camera theCam;
-    public float speed = 5;
+    public float speed = 0;
     public float delay = 0f;
-    public float bagDelay = 0.75f;
 
     public Transform firePoint;
     public Transform bagPosition;
@@ -15,22 +14,18 @@ public class PlayerController : MonoBehaviour
     public GameObject bag;
     public Animator animator;
     public GameObject enemy;
-
-    public Rigidbody2D player;
-    float xAxis;
-    float yAxis;
+   
     Vector2 posDif;
 
     void Update()
     {
         //Player movment
-        //Vector3 playerInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
-        xAxis = Input.GetAxisRaw("Horizontal");
-        yAxis = Input.GetAxisRaw("Vertical");
-        player.velocity = (new Vector2(xAxis, yAxis) * speed);
+        Vector3 playerInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+        
+        transform.position = transform.position + playerInput.normalized * speed * Time.deltaTime;
 
-        animator.SetFloat("AnimHorizontal", xAxis);
-        animator.SetFloat("AnimVertical", yAxis);
+        animator.SetFloat("AnimHorizontal",playerInput.x);
+        animator.SetFloat("AnimVertical", playerInput.y);
 
         RotateAnimation();
 
@@ -39,7 +34,7 @@ public class PlayerController : MonoBehaviour
         {
             GameObject bag2 =  Instantiate(bag, bagPosition.position, Quaternion.identity);
             bag2.transform.SetParent(bagPosition.transform);
-            Destroy(bag2, bagDelay);
+            Destroy(bag2, 1.3f);
         }   
     }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4778938434725492904}
   m_Layer: 0
   m_Name: Lollipop
-  m_TagString: Lollipop
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

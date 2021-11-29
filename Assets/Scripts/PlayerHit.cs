@@ -10,7 +10,7 @@ public class PlayerHit : MonoBehaviour
     int playerHit;
     int hpLost = 1;
 
-    int playerHealthMax = 5;
+    int playerHealthMax = 3;
     int playerHealthCurrent;
 
     private void Start()
@@ -34,14 +34,14 @@ public class PlayerHit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Lollipop"))
+        if(other.gameObject.CompareTag("Enemy"))
         {
             playerHit++;
 
             //refHealthController.PlayerHP(hpLost);
             TakeDamage(hpLost);
 
-            if (playerHit > 5)
+            if (playerHit > 2)
             {
                 Destroy(gameObject);
             }
