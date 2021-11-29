@@ -21,7 +21,7 @@ public class Gun : MonoBehaviour
     {
         //ami with mouse
         Vector3 mouse = Input.mousePosition;
-        Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
+        Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.position);
         Vector2 offSet = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
 
         angle = Mathf.Atan2(offSet.y, offSet.x) * Mathf.Rad2Deg;
@@ -35,7 +35,7 @@ public class Gun : MonoBehaviour
     }
     public void Fire(Vector3 offset)
     {
-        Bullet bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation).GetComponent<Bullet>();
+        Bullet bullet = Instantiate(bulletPrefab, firePoint.position +  new Vector3(1, 0), transform.rotation).GetComponent<Bullet>();
         bullet.FireMe(offset);
     }
 
