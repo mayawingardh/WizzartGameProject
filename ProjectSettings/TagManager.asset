@@ -18,6 +18,8 @@ TagManager:
   - ManagerGame
   - Bag
   - Lollipop
+  - Ammo
+  - Gun
   layers:
   - Default
   - TransparentFX

@@ -10,13 +10,20 @@ public class Gun : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float angle;
+    public int ammo = 10;
+    PickUpAmmo refPickUpAmmo;
+    GameObject player;
 
     void Start()
     {
         theCam = Camera.main;
+        player = GameObject.FindGameObjectWithTag("Player");
+        refPickUpAmmo =player.GetComponent<PickUpAmmo>();
+       
+        
     }
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         //aim with mouse
         Vector2 mouse = Input.mousePosition;
@@ -26,11 +33,25 @@ public class Gun : MonoBehaviour
         angle = Mathf.Atan2(offSet.y, offSet.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
-        //spawn bullets 
+        //shoot 
         if (Input.GetMouseButtonDown(0))
         {
-            Fire(offSet);
-        }
+
+            if (ammo > 0)
+            {
+                Fire(offSet);
+                ammo--;
+            }
+            //TODO if ammmo = 0 one klick before shoot
+            //TODO ispickup never false
+            
+
+            if (refPickUpAmmo.isPickedUp)
+            {
+                ammo = 10;
+
+            }
+        }      
     }
     public void Fire(Vector2 offset)
     {

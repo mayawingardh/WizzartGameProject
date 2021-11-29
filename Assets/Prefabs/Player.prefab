@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 741916806122516020}
   - component: {fileID: 741916806122516021}
   - component: {fileID: 741916806122516022}
+  - component: {fileID: -5096737350897108905}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -245,12 +246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
-  delay: 0
-  bagDelay: 0.75
   firePoint: {fileID: 741916807943611256}
-  bagPosition: {fileID: 0}
   playerBullets: {fileID: 4455235740079281236, guid: cc216e83a21e2f14f9b1d2ee1050aab4, type: 3}
-  bag: {fileID: 7831685207062621866, guid: bc5415206717fde40a01dfa5b1ddc191, type: 3}
   animator: {fileID: 0}
   enemy: {fileID: 6493922598884659036, guid: c917cc634c4f43b4bafa1bc15c8dd4b8, type: 3}
 --- !u!114 &741916806122516021
@@ -275,6 +272,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b6bf84f3dcff914e9e0b58f4443eb8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5096737350897108905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741916806122516023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3555451cc39e8f4e98404c5da2562a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &741916807943611257
@@ -406,3 +415,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4455235740079281236, guid: cc216e83a21e2f14f9b1d2ee1050aab4, type: 3}
   firePoint: {fileID: 741916807943611256}
   angle: 0
+  ammo: 10

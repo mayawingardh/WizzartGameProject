@@ -28,7 +28,6 @@ public class PlayerHit : MonoBehaviour
     void TakeDamage(int hpLost)
     {
         playerHealthCurrent -= hpLost;
-
         refHealthController.SetCurrentHealth(playerHealthCurrent);
     }
 
