@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     Vector2 whereToSpawn;
     public float spawnRate = 3f;
     float nextSpawn = 2f;
-    int maxEnemies = 2;
+    int maxEnemies = 100;
     int enemyCounter;
 
     // Start is called before the first frame update
@@ -23,12 +23,11 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {  
             //When time passed is greater than the spawnRate, spawn an enemy at a random position X and Y
-        if (Time.time > nextSpawn && enemyCounter < maxEnemies)
-            
+        if (Time.time > nextSpawn && enemyCounter < maxEnemies)   
         {
              nextSpawn = Time.time + spawnRate;
-             randX = Random.Range(-10f, 10f);        //Random pos X Change values to increase random range
-             randY = Random.Range(-10f, 10f);        //Random pos Y Change values to increase random range
+             randX = Random.Range(-25f, 25f);        //Random pos X Change values to increase random range
+             randY = Random.Range(-14f, 14f);        //Random pos Y Change values to increase random range
              whereToSpawn = new Vector2(randX, randY);
              Instantiate(enemy, whereToSpawn, Quaternion.identity);
              enemyCounter++;                         //Counts enemies spawned, used for reaching max amount of enemies

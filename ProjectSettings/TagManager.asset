@@ -16,6 +16,8 @@ TagManager:
   - Undefined
   - Enemy
   - ManagerGame
+  - Bag
+  - Lollipop
   layers:
   - Default
   - TransparentFX
