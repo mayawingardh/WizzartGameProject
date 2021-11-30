@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3805699836829585310}
   - component: {fileID: 4143435618114718838}
-  - component: {fileID: -4176503966825945025}
+  - component: {fileID: 4716790270143642176}
+  - component: {fileID: 1670083267}
   m_Layer: 0
-  m_Name: spr_item06
-  m_TagString: Untagged
+  m_Name: AmmoPickUp
+  m_TagString: Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-4176503966825945025
+--- !u!114 &4716790270143642176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,3 +96,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3555451cc39e8f4e98404c5da2562a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1670083267
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855894838131298419}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.13, y: 0.85}
+    newSize: {x: 1.13, y: 0.85}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.13, y: 0.85}
+  m_EdgeRadius: 0

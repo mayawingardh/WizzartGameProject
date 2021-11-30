@@ -13,7 +13,6 @@ public class Gun : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-
         ammoCount = 10;
     }
     public void Update()
