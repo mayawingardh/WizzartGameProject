@@ -5,29 +5,21 @@ using UnityEngine;
 public class PickUpAmmo : MonoBehaviour
 {
     GameObject gun;
-    public int playerAmmo;
-    public bool isPickedUp = false;
-    
-    void Start()
+    Gun refGun;
+    int ammoPU = 10;
+
+    private void Start()
     {
         gun = GameObject.FindGameObjectWithTag("Gun");
-        playerAmmo = gun.GetComponent<Gun>().ammo;
+        refGun = gun.GetComponent<Gun>();
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Ammo"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            isPickedUp = true;
+            refGun.RefillAmmo(ammoPU);
 
-            if (playerAmmo < 10)
-            {
-                playerAmmo = 10;
-                isPickedUp = false;
-            }
-
-            Destroy(other.gameObject);
-        }      
+            Destroy(gameObject);
+        }
     }
 }
-
