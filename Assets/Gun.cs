@@ -13,14 +13,13 @@ public class Gun : MonoBehaviour
     public int ammo = 10;
     PickUpAmmo refPickUpAmmo;
     GameObject player;
+    PickUpAmmo pickUpAmmo;
 
     void Start()
     {
         theCam = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player");
-        refPickUpAmmo =player.GetComponent<PickUpAmmo>();
-       
-        
+        refPickUpAmmo =player.GetComponent<PickUpAmmo>();     
     }
     // Update is called once per frame
     public void Update()
@@ -36,22 +35,19 @@ public class Gun : MonoBehaviour
         //shoot 
         if (Input.GetMouseButtonDown(0))
         {
-
             if (ammo > 0)
             {
                 Fire(offSet);
                 ammo--;
-            }
-            //TODO if ammmo = 0 one klick before shoot
-            //TODO ispickup never false
-            
+                 
+            }      
+        }
 
-            if (refPickUpAmmo.isPickedUp)
+        if (refPickUpAmmo.isPickedUp)
             {
                 ammo = 10;
-
+                refPickUpAmmo.isPickedUp = false;
             }
-        }      
     }
     public void Fire(Vector2 offset)
     {

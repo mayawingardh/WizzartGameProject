@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PickUpAmmo : MonoBehaviour
 {
-
     GameObject gun;
     public int playerAmmo;
     public bool isPickedUp = false;
@@ -13,12 +12,6 @@ public class PickUpAmmo : MonoBehaviour
     {
         gun = GameObject.FindGameObjectWithTag("Gun");
         playerAmmo = gun.GetComponent<Gun>().ammo;
-    }
-
-    void Update()
-    {
-        
-        Debug.Log(playerAmmo);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,13 +23,11 @@ public class PickUpAmmo : MonoBehaviour
             if (playerAmmo < 10)
             {
                 playerAmmo = 10;
-                
-               
+                isPickedUp = false;
             }
-             
-            Destroy(other.gameObject);
-        }
 
-        
-    }  
+            Destroy(other.gameObject);
+        }      
+    }
 }
+
