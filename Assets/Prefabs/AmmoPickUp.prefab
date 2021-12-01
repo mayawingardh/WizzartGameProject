@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3805699836829585310}
   - component: {fileID: 4143435618114718838}
   - component: {fileID: 1670083267}
+  - component: {fileID: -2239522432063496777}
   m_Layer: 0
   m_Name: AmmoPickUp
   m_TagString: Ammo
@@ -109,3 +110,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.13, y: 0.85}
   m_EdgeRadius: 0
+--- !u!114 &-2239522432063496777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855894838131298419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87fda646ba969d459b2fc2e9cc246cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
