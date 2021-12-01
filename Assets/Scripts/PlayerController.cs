@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
-        player.velocity = (new Vector2(xAxis, yAxis) * speed);
+        player.velocity = (new Vector2(xAxis, yAxis).normalized * speed);
         RotateAnimation();  
     }
 
