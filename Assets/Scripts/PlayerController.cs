@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public GameObject playerBullets;
     public Animator animator;
     public GameObject enemy;
-
+    public ParticleSystem dust;
     Rigidbody2D player;
     float xAxis;
     float yAxis;
@@ -25,25 +25,34 @@ public class PlayerController : MonoBehaviour
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         player.velocity = (new Vector2(xAxis, yAxis) * speed);
-        
+        RotateAnimation();  
     }
 
 
         // TODO
         //animator.SetFloat("AnimHorizontal", xAxis);
         //animator.SetFloat("AnimVertical", yAxis);
-        //RotateAnimation(); 
+
+       
 
     private void RotateAnimation()
     {
         if (Input.GetAxis("Horizontal") > 0.01f)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            CreateDust();
         }
             
         else if (Input.GetAxis("Horizontal") < -0.01f)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            CreateDust();
         }          
+    }
+
+    void CreateDust()
+    {
+
+        dust.Play();
     }
 }
