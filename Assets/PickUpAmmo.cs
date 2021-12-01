@@ -8,7 +8,11 @@ public class PickUpAmmo : MonoBehaviour
     Gun refGun;
     int ammoPU = 10;
     public GameObject objectToSpaw;
-    float lifeTime = 10;
+    public float spawnRate = 3f;
+    float lifeTime = 5f;
+    float nextSpawn = 2f;
+    int maxPickUp = 1;
+    int pickUpCounter;
 
     private void Start()
     {
@@ -23,16 +27,24 @@ public class PickUpAmmo : MonoBehaviour
 
     void spawnPickUp()
     {
+        if (Time.time > nextSpawn && pickUpCounter < maxPickUp)
+        {
+            nextSpawn = Time.time + spawnRate;
+            Vector2 whereToSpawn = new Vector2(Random.Range(-14f, 14f), Random.Range(-25f, 25f));
+            GameObject clone= Instantiate(objectToSpaw,whereToSpawn, Quaternion.identity);
+            pickUpCounter++;
 
-        Instantiate(objectToSpaw,Vector3.zero, Quaternion.identity);
-        Destroy(this.gameObject, lifeTime);
+            Destroy(clone, lifeTime);
+        }
+
+        pickUpCounter = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            refGun.RefillAmmo(ammoPU);
+           refGun.RefillAmmo(ammoPU);
 
             Destroy(gameObject);
         }

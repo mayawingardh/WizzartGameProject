@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3805699836829585310}
   - component: {fileID: 4143435618114718838}
-  - component: {fileID: 4716790270143642176}
   - component: {fileID: 1670083267}
   m_Layer: 0
   m_Name: AmmoPickUp
@@ -84,18 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4716790270143642176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2855894838131298419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3555451cc39e8f4e98404c5da2562a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1670083267
 BoxCollider2D:
   m_ObjectHideFlags: 0
