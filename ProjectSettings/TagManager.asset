@@ -20,8 +20,6 @@ TagManager:
   - Lollipop
   - Ammo
   - Gun
-  - PanelDialoguePopArt
-  - PanelDialogueSurreal
   layers:
   - Default
   - TransparentFX
