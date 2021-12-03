@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickUpAmmo : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PickUpAmmo : MonoBehaviour
         gun = GameObject.FindGameObjectWithTag("Gun");
         refGun = gun.GetComponent<Gun>();
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))

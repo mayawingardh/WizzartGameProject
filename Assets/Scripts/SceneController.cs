@@ -32,6 +32,7 @@ public class SceneController : MonoBehaviour
 
         if(other.CompareTag("TriggerAteljen"))
         {
+            
             SceneManager.LoadScene("SceneAteljen");
         }
 

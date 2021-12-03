@@ -9,7 +9,6 @@ public class TESTScene : MonoBehaviour
     GameObject panelDialoguePopArt;
     GameObject panelDialogueSurreal;
 
-
     private void Start()
     {
         panelDialoguePopArt = GameObject.FindGameObjectWithTag("PanelDialoguePopArt");
@@ -20,10 +19,10 @@ public class TESTScene : MonoBehaviour
     }
 
     // Prompts for Pop Art
-    public void DialoguePopArt()
-    {
-        panelDialoguePopArt.SetActive(true);
-    }
+    //public void DialoguePopArt()
+    //{
+    //    panelDialoguePopArt.SetActive(true);
+    //}
 
     public void LoadRoomPopArt()
     {
@@ -36,10 +35,10 @@ public class TESTScene : MonoBehaviour
     }
 
     // Prompts for Surreal
-    public void DialogueSurreal()
-    {
-        panelDialogueSurreal.SetActive(true);
-    }
+    //public void DialogueSurreal()
+    //{
+    //    panelDialogueSurreal.SetActive(true);
+    //}
 
     public void LoadRoomSurreal()
     {

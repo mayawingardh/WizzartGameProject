@@ -1,19 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
     private Camera cam;
+    GameObject player;
+    PlayerController refPlayerController;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public Slider slider;
+
     public float angle;
     public int ammoCount;
 
     void Start()
     {
         cam = Camera.main;
+        player = GameObject.FindGameObjectWithTag("Player");
+        refPlayerController = player.GetComponent<PlayerController>();
+
         ammoCount = 10;
+        slider.maxValue = ammoCount;
     }
     public void Update()
     {
@@ -29,12 +38,14 @@ public class Gun : MonoBehaviour
         {
             Fire(offSet);
             ammoCount--;
+            slider.value = ammoCount;
         }
     }
 
     public void RefillAmmo(int ammo)
     {
         ammoCount = ammo;
+        slider.value = ammoCount;
     }
 
     public void Fire(Vector2 offset)

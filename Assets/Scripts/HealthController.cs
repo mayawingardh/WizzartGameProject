@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class HealthController : MonoBehaviour
 {
     // Connect canvas text component in inspector
-    public Text textPlayerHP;
-    public Text textEnemyHP;
+    //public Text textPlayerHP;
+    //public Text textEnemyHP;
 
     // Connect canvas slider in inspector
     public Slider slider;

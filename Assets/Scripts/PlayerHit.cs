@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHit : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class PlayerHit : MonoBehaviour
             if (playerHit > 5)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene("SceneRoomPopArt");
             }
         }
     }

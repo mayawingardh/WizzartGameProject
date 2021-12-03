@@ -22,6 +22,7 @@ TagManager:
   - Gun
   - PanelDialoguePopArt
   - PanelDialogueSurreal
+  - FirePoint
   layers:
   - Default
   - TransparentFX
