@@ -6,16 +6,16 @@ using TMPro;
 
 public class TESTScene : MonoBehaviour
 {
-    GameObject panelDialoguePopArt;
-    GameObject panelDialogueSurreal;
+    //GameObject panelDialoguePopArt;
+    //GameObject panelDialogueSurreal;
 
     private void Start()
     {
-        panelDialoguePopArt = GameObject.FindGameObjectWithTag("PanelDialoguePopArt");
-        panelDialoguePopArt.SetActive(false);
+        //panelDialoguePopArt = GameObject.FindGameObjectWithTag("PanelDialoguePopArt");
+        //panelDialoguePopArt.SetActive(false);
 
-        panelDialogueSurreal = GameObject.FindGameObjectWithTag("PanelDialogueSurreal");
-        panelDialogueSurreal.SetActive(false);
+        //panelDialogueSurreal = GameObject.FindGameObjectWithTag("PanelDialogueSurreal");
+        //panelDialogueSurreal.SetActive(false);
     }
 
     // Prompts for Pop Art
@@ -29,10 +29,15 @@ public class TESTScene : MonoBehaviour
         SceneManager.LoadScene("SceneRoomPopArt");
     }
 
-    public void CancelRoomPopArt()
+    public void EnterLevelPopArt()
     {
-        panelDialoguePopArt.SetActive(false);
+        SceneManager.LoadScene("SceneLevelPopArt");
     }
+
+    //public void CancelRoomPopArt()
+    //{
+    //    panelDialoguePopArt.SetActive(false);
+    //}
 
     // Prompts for Surreal
     //public void DialogueSurreal()
@@ -45,10 +50,10 @@ public class TESTScene : MonoBehaviour
         SceneManager.LoadScene("SceneRoomSurreal");
     }
 
-    public void CancelRoomSurreal()
-    {
-        panelDialogueSurreal.SetActive(false);
-    }
+    //public void CancelRoomSurreal()
+    //{
+    //    panelDialogueSurreal.SetActive(false);
+    //}
 
 
 }

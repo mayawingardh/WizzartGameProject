@@ -23,6 +23,7 @@ TagManager:
   - PanelDialoguePopArt
   - PanelDialogueSurreal
   - FirePoint
+  - EnterLevelPopArt
   layers:
   - Default
   - TransparentFX
