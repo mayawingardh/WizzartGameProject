@@ -9,7 +9,6 @@ public class Gun : MonoBehaviour
     GameObject player;
     PlayerController refPlayerController;
     public GameObject bulletPrefab;
-    public AudioSource shooting;
     public Transform firePoint;
     public Slider slider;
 
@@ -38,7 +37,6 @@ public class Gun : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && ammoCount > 0)
         {
             Fire(offSet);
-            shooting.Play();
             ammoCount--;
             slider.value = ammoCount;
         }

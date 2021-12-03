@@ -14,33 +14,24 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D player;
     float xAxis;
     float yAxis;
-    Vector2 posDif;
-    public AudioSource playerRunning;
-    
 
     private void Start()
     {
         player = GetComponent<Rigidbody2D>();
-
     }
     private void FixedUpdate()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         player.velocity = (new Vector2(xAxis, yAxis).normalized * speed);
-        RotateAnimation();
 
-        if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
-        {
-            playerRunning.mute= false;
-        }
-
-        else
-        {
-          
-          playerRunning.mute =true;
-        }
     }
+    //
+    //void Update()
+    //{
+    //    xAxis = Input.GetAxisRaw("Horizontal");
+    //    yAxis = Input.GetAxisRaw("Vertical");
+    //    player.velocity = (new Vector2(xAxis, yAxis).normalized * speed);
 
     //    RotateAnimation();
     //}
@@ -51,21 +42,18 @@ public class PlayerController : MonoBehaviour
 
 
     private void RotateAnimation()
-    { 
-        if (Input.GetAxisRaw("Horizontal") > 0.01f)
+    {
+        if (Input.GetAxis("Horizontal") > 0.01f)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
             CreateDust();
-           
         }
-            
-        else if (Input.GetAxisRaw("Horizontal") < -0.01f)
+
+        else if (Input.GetAxis("Horizontal") < -0.01f)
         {
-            Debug.Log("HEJ");
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
             CreateDust();
-       
-        }          
+        }
     }
 
     void CreateDust()
