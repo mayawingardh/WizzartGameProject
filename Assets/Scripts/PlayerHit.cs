@@ -41,7 +41,7 @@ public class PlayerHit : MonoBehaviour
             //refHealthController.PlayerHP(hpLost);
             TakeDamage(hpLost);
 
-            if (playerHit > 5)
+            if (playerHit > 4)
             {
                 Destroy(gameObject);
                 SceneManager.LoadScene("SceneRoomPopArt");
