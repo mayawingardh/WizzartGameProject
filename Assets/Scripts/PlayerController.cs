@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public GameObject enemy;
     public ParticleSystem dust;
+    public AudioSource playerRunning;
     Rigidbody2D player;
     float xAxis;
     float yAxis;
@@ -24,6 +25,18 @@ public class PlayerController : MonoBehaviour
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         player.velocity = (new Vector2(xAxis, yAxis).normalized * speed);
+
+        if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
+        {
+            playerRunning.mute = false;
+        }
+
+        else
+        {
+
+            playerRunning.mute = true;
+        }
+
 
     }
     //

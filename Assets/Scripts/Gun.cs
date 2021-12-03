@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     public Slider slider;
+    public AudioSource Shooting;
 
     public float angle;
     public int ammoCount;
@@ -37,6 +38,7 @@ public class Gun : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && ammoCount > 0)
         {
             Fire(offSet);
+            Shooting.Play();
             ammoCount--;
             slider.value = ammoCount;
         }
