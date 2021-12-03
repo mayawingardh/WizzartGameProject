@@ -29,15 +29,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
         {
             playerRunning.mute = false;
+            CreateDust();
         }
 
         else
         {
-
             playerRunning.mute = true;
         }
-
-
     }
     //
     //void Update()
@@ -59,16 +57,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Horizontal") > 0.01f)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
-            CreateDust();
+            
+            
         }
 
         else if (Input.GetAxis("Horizontal") < -0.01f)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
-            CreateDust();
+            
         }
     }
-
     void CreateDust()
     {
         dust.Play();

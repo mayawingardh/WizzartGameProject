@@ -12,7 +12,6 @@ public class PickUpAmmo : MonoBehaviour
     public AudioClip clip;
     public bool pickedUp;
     
-
     private void Start()
     {
         gun = GameObject.FindGameObjectWithTag("Gun");
@@ -21,12 +20,10 @@ public class PickUpAmmo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-      
           if (pickedUp)
 
           {
-                     return;
+             return;
           }
 
         if (other.gameObject.CompareTag("Player"))
