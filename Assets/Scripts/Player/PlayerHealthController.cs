@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthController : MonoBehaviour
+public class PlayerHealthController : MonoBehaviour
 {
     // Connect canvas text component in inspector
     //public Text textPlayerHP;

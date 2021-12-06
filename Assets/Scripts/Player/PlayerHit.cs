@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHit : MonoBehaviour
 {
     GameObject managerGame;
-    HealthController refHealthController;
+    PlayerHealthController refHealthController;
     
     int playerHit;
     int hpLost = 1;
@@ -17,7 +17,7 @@ public class PlayerHit : MonoBehaviour
     private void Start()
     {
         managerGame = GameObject.FindGameObjectWithTag("ManagerGame");
-        refHealthController = managerGame.GetComponent<HealthController>();
+        refHealthController = managerGame.GetComponent<PlayerHealthController>();
 
         refHealthController.SetMaxHealth(playerHealthMax);
 
@@ -34,7 +34,7 @@ public class PlayerHit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Lollipop"))
+        if(other.gameObject.CompareTag("EnemyLollipopGirl") || other.gameObject.CompareTag("Lollipop") || other.gameObject.CompareTag("EnemyLips"))
         {
             playerHit++;
 

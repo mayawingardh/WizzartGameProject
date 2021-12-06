@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class LipsMovement : MonoBehaviour
 {
-
     GameObject player;
     Rigidbody2D RBEnemy;
     Vector2 movement;
