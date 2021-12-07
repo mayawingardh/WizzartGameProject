@@ -26,6 +26,7 @@ TagManager:
   - EnemyLips
   - EnemyLollipopGirl
   - Enemy
+  - Ally
   layers:
   - Default
   - TransparentFX
