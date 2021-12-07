@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class LipsMovement : MonoBehaviour
 {
+    GameObject lips;
     GameObject player;
     Rigidbody2D RBEnemy;
     Vector2 movement;
-    public float moveSpeed = 5;
+    public float moveSpeed = 8;
 
     void Start()
     {
         RBEnemy = this.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        lips = GameObject.FindGameObjectWithTag("EnemyLips");
     }
 
     void Update()
@@ -36,5 +38,14 @@ public class LipsMovement : MonoBehaviour
     {
         //Handles movement speed of the enemy
         RBEnemy.MovePosition((Vector3)transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //Destroys lollipop when it hits player
+        if (other.CompareTag("Player"))
+        {
+            Destroy(lips);
+        }
     }
 }
