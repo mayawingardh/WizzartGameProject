@@ -32,7 +32,7 @@ public class LollipopGirlAIPink : MonoBehaviour
         {
             transform.position = this.transform.position;
         }
-        else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
+        if (Vector2.Distance(transform.position, player.position) < retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
