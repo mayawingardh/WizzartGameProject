@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!82 &589411 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 693669185, guid: 9d9c2e1d471d5ac499fd976f80fb1c18, type: 3}
+  m_PrefabInstance: {fileID: 1192296185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3133961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,6 +2903,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1879551973, guid: 9d9c2e1d471d5ac499fd976f80fb1c18, type: 3}
+      propertyPath: Sound1
+      value: 
+      objectReference: {fileID: 8300000, guid: e59ff44a209eaa84a9dfac1a56998416, type: 3}
+    - target: {fileID: 1879551973, guid: 9d9c2e1d471d5ac499fd976f80fb1c18, type: 3}
+      propertyPath: Sound2
+      value: 
+      objectReference: {fileID: 8300000, guid: 5860e99e1ca60bd4ab627d17d3c69faf, type: 3}
+    - target: {fileID: 1879551973, guid: 9d9c2e1d471d5ac499fd976f80fb1c18, type: 3}
+      propertyPath: Sound3
+      value: 
+      objectReference: {fileID: 8300000, guid: c6570e83970e872469db75f548708ef3, type: 3}
+    - target: {fileID: 1879551973, guid: 9d9c2e1d471d5ac499fd976f80fb1c18, type: 3}
+      propertyPath: Sound4
+      value: 
+      objectReference: {fileID: 8300000, guid: 377c1a5ba2d54ff41a7282408a9ac3ff, type: 3}
+    - target: {fileID: 1879551973, guid: 9d9c2e1d471d5ac499fd976f80fb1c18, type: 3}
+      propertyPath: Sound5
+      value: 
+      objectReference: {fileID: 8300000, guid: 48d10c877db4e12499f9d985e2a58b16, type: 3}
+    - target: {fileID: 1879551973, guid: 9d9c2e1d471d5ac499fd976f80fb1c18, type: 3}
+      propertyPath: speaker
+      value: 
+      objectReference: {fileID: 589411}
     - target: {fileID: 90955207781393674, guid: 9d9c2e1d471d5ac499fd976f80fb1c18, type: 3}
       propertyPath: m_RootOrder
       value: 14
