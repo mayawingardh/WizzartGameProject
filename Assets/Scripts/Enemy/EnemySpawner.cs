@@ -19,7 +19,6 @@ public class EnemySpawner : MonoBehaviour
     {
          enemyCounter = 0;
     }
-
     void Update()
     {  
         //When time passed is greater than the spawnRate, spawn an enemy at a random position X and Y
