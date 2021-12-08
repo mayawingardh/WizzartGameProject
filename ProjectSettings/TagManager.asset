@@ -13,10 +13,7 @@ TagManager:
   - TriggerLevelSurreal
   - TriggerLevelWaterColour
   - TriggerAteljen
-  - Undefined
   - ManagerGame
-  - Bag
-  - Lollipop
   - Ammo
   - Gun
   - PanelDialoguePopArt
@@ -24,10 +21,11 @@ TagManager:
   - FirePoint
   - EnterLevelPopArt
   - EnemyLips
-  - EnemyLollipopGirl
-  - Enemy
   - Ally
   - EnemyLollipopGirlPink
+  - EnemyLollipopGirlBlue
+  - LollipopBlue
+  - LollipopPink
   layers:
   - Default
   - TransparentFX

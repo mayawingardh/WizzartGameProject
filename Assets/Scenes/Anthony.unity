@@ -1764,7 +1764,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6bf84f3dcff914e9e0b58f4443eb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speaker: {fileID: 0}
   invincibilityTime: 1.5
+  Prefab1: {fileID: 0}
+  Prefab2: {fileID: 0}
+  Prefab3: {fileID: 0}
+  Sound1: {fileID: 0}
+  Sound2: {fileID: 0}
+  Sound3: {fileID: 0}
+  Sound4: {fileID: 0}
+  Sound5: {fileID: 0}
 --- !u!114 &1894078300
 MonoBehaviour:
   m_ObjectHideFlags: 0

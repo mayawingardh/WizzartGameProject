@@ -26,8 +26,8 @@ public class EnemySpawner : MonoBehaviour
         if (Time.time > nextSpawn && enemyCounter < maxEnemies)   
         {
              nextSpawn = Time.time + spawnRate;
-             randX = Random.Range(-25f, 25f);        //Random pos X Change values to increase random range
-             randY = Random.Range(-14f, 14f);        //Random pos Y Change values to increase random range
+             randX = Random.Range(21f, 21f);        //Random pos X Change values to increase random range
+             randY = Random.Range(6f, 6f);        //Random pos Y Change values to increase random range
              whereToSpawn = new Vector2(randX, randY);
              GameObject cloneEnemy = Instantiate(enemy, whereToSpawn, Quaternion.identity);
              enemyCounter++;                         //Counts enemies spawned, used for reaching max amount of enemies

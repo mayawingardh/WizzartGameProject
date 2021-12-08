@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lollipop: MonoBehaviour
+public class LollipopBlue: MonoBehaviour
 { 
     Transform player;
     Vector2 target;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LollipopAttack : MonoBehaviour
+public class LollipopAttackBlue : MonoBehaviour
 {
     Transform player;
     public GameObject lollipop;

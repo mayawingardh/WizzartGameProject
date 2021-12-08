@@ -13,12 +13,16 @@ public class LollipopGirlAIPink : MonoBehaviour
     public GameObject lollipop;
     Transform ally;
     Transform player;
+    Transform lollipopGirlBlue;
+    Transform lollipopGirlPink;
 
     // Start is called before the first frame update
     void Start()
     {
         ally = GameObject.FindGameObjectWithTag("Ally").transform;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        lollipopGirlBlue = GameObject.FindGameObjectWithTag("EnemyLollipopGirlBlue").transform;
+        lollipopGirlPink = GameObject.FindGameObjectWithTag("EnemyLollipopGirlPink").transform;
     }
 
     // Update is called once per frame
