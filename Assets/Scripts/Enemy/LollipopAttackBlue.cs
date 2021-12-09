@@ -17,6 +17,11 @@ public class LollipopAttackBlue : MonoBehaviour
 
     void Update()
     {
+        ShootLollipop();
+    }
+
+    void ShootLollipop()
+    {
         //Governs how long it takes for the enemy to attack again
         if (timeBtwShots <= 0)
         {
