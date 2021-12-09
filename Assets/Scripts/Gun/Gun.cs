@@ -9,7 +9,11 @@ public class Gun : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     public Slider slider;
-    public AudioSource Shooting;
+    public AudioClip reloadClip;
+    public AudioClip shooting;
+    public AudioSource speaker;
+
+    bool reloading = false;
 
     public float angle;
     public int ammoCount;
@@ -18,7 +22,7 @@ public class Gun : MonoBehaviour
     {
         cam = Camera.main;
 
-        ammoCount = 10;
+        ammoCount = 20;
         slider.maxValue = ammoCount;
     }
     public void Update()
@@ -31,12 +35,24 @@ public class Gun : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
         //shoot 
-        if (Input.GetMouseButtonDown(0) && ammoCount > 0)
+        if (Input.GetMouseButtonDown(0) && ammoCount > 0 && reloading == false)
         {
             Fire(offSet);
-            Shooting.Play();
+            speaker.PlayOneShot(shooting);
+            reloading = true;
             ammoCount--;
             slider.value = ammoCount;
+            Invoke("ReloadingGun", 0.2f);
+
+        }
+
+        if (Input.GetKeyDown("r"))
+
+        {
+            ammoCount = 20;
+            speaker.PlayOneShot(reloadClip);
+            reloading = true;
+            Invoke("ReloadingGun", 3f); //reloadClip.length
         }
     }
 
@@ -52,11 +68,8 @@ public class Gun : MonoBehaviour
         bullet.FireMe(offset);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void ReloadingGun()//lite dåligt namn då det används på flera stallen nu
     {
-        if (other.CompareTag("Enemy"))
-        {
-            Destroy(other.gameObject);
-        }
+        reloading = false;
     }
 }

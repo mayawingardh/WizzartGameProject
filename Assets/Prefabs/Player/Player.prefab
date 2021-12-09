@@ -269,10 +269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6bf84f3dcff914e9e0b58f4443eb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speaker: {fileID: 0}
   invincibilityTime: 1.5
   Prefab1: {fileID: 3332534145781009569, guid: 0f8abd16943bca244bb97efcb8b7d26e, type: 3}
   Prefab2: {fileID: 2810520077929371884, guid: 8a17ccbe7c131534091da7f4697c5f3d, type: 3}
   Prefab3: {fileID: 2691085504822098689, guid: f2129ec5a7716584693bd82bd6867f08, type: 3}
+  Sound1: {fileID: 0}
+  Sound2: {fileID: 0}
+  Sound3: {fileID: 0}
+  Sound4: {fileID: 0}
+  Sound5: {fileID: 0}
 --- !u!114 &1954081108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5096,6 +5102,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90955207781393674}
     m_Modifications:
+    - target: {fileID: 777119378118357172, guid: 9ad6921100cfc56478db213d33daeda2, type: 3}
+      propertyPath: m_Volume
+      value: 0.457
+      objectReference: {fileID: 0}
     - target: {fileID: 946998528829012337, guid: 9ad6921100cfc56478db213d33daeda2, type: 3}
       propertyPath: m_Name
       value: Gun
@@ -5116,6 +5126,10 @@ PrefabInstance:
       propertyPath: Shooting
       value: 
       objectReference: {fileID: 251585539}
+    - target: {fileID: 6546619033560978977, guid: 9ad6921100cfc56478db213d33daeda2, type: 3}
+      propertyPath: shooting
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bd29360e02f47c48a2d15ec897d829e, type: 3}
     - target: {fileID: 6712497424777142861, guid: 9ad6921100cfc56478db213d33daeda2, type: 3}
       propertyPath: m_FlipX
       value: 1
